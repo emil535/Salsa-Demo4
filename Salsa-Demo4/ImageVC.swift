@@ -4,12 +4,13 @@
 //
 //  Created by Emil Safier on 7/3/19.
 //  Copyright © 2019 Emil Safier. All rights reserved.
-//
+//  THIS IS THE START OF A SECOND SESSION for Salsa-Demo4
 
 import UIKit
 
 class ImageVC: UIViewController, UIScrollViewDelegate {
 
+    
     //  MARK: - Outlets
     @IBOutlet weak var scrollView: UIScrollView!    {
         didSet {
@@ -52,6 +53,15 @@ class ImageVC: UIViewController, UIScrollViewDelegate {
         toggleFilterMenu()
     }
     
+    /**
+     func which enables the NavBarButton to toggle the display of the Menu Filter.
+     This is done by modifying the constraint of the ContainerView between -400 (hidden) and +20 (visible).
+     
+     Note:  Other effects are:
+     - Change in icon image
+     - Change in icon color
+     - dimming of image when menu is displayed.
+    */
     func toggleFilterMenu() -> Void {
         let newShift:CGFloat!
         if self.filterMenuConstraint.constant == CGFloat(20.0) {
